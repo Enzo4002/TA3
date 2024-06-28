@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Info</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+}
+.background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .background .background-layer {
+            position: absolute;
+            width: 100%;
+            height: 33.33%;
+            background-image: url('gif3.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .background .background-top {
+            top: 0;
+        }
+
+        .background .background-center {
+            top: 33.33%;
+        }
+
+        .background .background-bottom {
+            top: 66.66%;
+        }
+
+header {
+    background: linear-gradient(90deg, #000000, #000000);
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgb(2, 2, 226);
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo img {
+    height: 80px; 
+}
+
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navigation li {
+    margin: 0 20px; 
+}
+
+.navigation a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 15px 20px; 
+    transition: color 0.3s, transform 0.3s;
+}
+
+.navigation a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #0004f7;
+    transition: width 0.3s ease-out, left 0.3s ease-out;
+    transform: translateX(-50%);
+}
+
+.navigation a:hover {
+    color: #0004f7;
+    transform: translateY(-3px); 
+
+}
+
+.navigation a:hover:before {
+    width: calc(100% - 40px); 
+    left: 20px; 
+}
+
+@keyframes hover-grow {
+    100% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            width: 20%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar .link-card {
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgb(2, 2, 226);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .sidebar .link-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .sidebar .link-card p {
+            margin: 10px 0 0 0;
+            font-weight: bold;
+        }
+
+        .sidebar .link-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgb(255, 255, 255);
+        }
+
+        .content {
+            width: 75%;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .image-item {
+            width: calc(50% - 20px);
+            background-color: #000000;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgb(2, 2, 226);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .image-item p {
+            margin: 10px 0 0 0;
+        }
+
+        .image-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(247, 247, 247, 0.925);
+        }
+
+        .text-content {
+            background-color: #000000;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgb(2, 2, 226);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #000000, #000000);
+            color: #00d7f8;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 -4px 6px rgb(2, 2, 226);
+        }
+
+        .footer-logo img {
+            height: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #0004f7;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="background-layer background-top"></div>
+        <div class="background-layer background-center"></div>
+        <div class="background-layer background-bottom"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Cyber Security Logo">
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+    <div class="container">
+        <aside class="sidebar">
+            <a href="#https://www.simplilearn.com/tutorials/cyber-security-tutorial/what-is-cyber-security" class="link-card">
+                <img src="logo.png" alt="Source 1">
+                <p>Source 1</p>
+            </a>
+            <a href="#https://www.techtarget.com/searchsecurity/definition/cybersecurity" class="link-card">
+                <img src="logo.png" alt="source 2">
+                <p>Source 2</p>
+            </a>
+            <a href="#https://www.itgovernance.co.uk/what-is-cybersecurity" class="link-card">
+                <img src="logo.png" alt="Source 3">
+                <p>Source 3</p>
+            </a>
+            <a href="#https://www.cisco.com/c/en/us/products/security/what-is-cybersecurity.html" class="link-card">
+                <img src="logo.png" alt="Source 4">
+                <p>Source 4</p>
+            </a>
+            <a href="#https://www.kaspersky.com/resource-center/definitions/what-is-cyber-security" class="link-card">
+                <img src="logo.png" alt="Source 5">
+                <p>Source 5</p>
+            </a>
+        </aside>
+
+        <main class="content">
+            <section class="images">
+                <div class="image-item">
+                    <img src="cyber.jpeg" alt="Cyber Security Image 1 Example">
+                    <p style="color: #f0f0f0;"> Cybersecurity is about protecting your online life from bad guys who try to steal your stuff or mess with your computer. It's like locking your doors and windows to keep burglars out, but for your digital information and devices. It's important to use strong passwords, update your software, and be careful with what you share online to stay safe from cyber threats. </p>
+                </div>
+                <div class="image-item">
+                    <img src="The-Importance-of-Cybersecurity.jpg" alt="Cyber Security Image 2 Example">
+                    <p style="color: #f0f0f0;">Cybersecurity is important because it protects your personal and sensitive information from being stolen or misused by cybercriminals. It helps prevent identity theft, financial losses, and disruption of your digital activities, ensuring a safer online experience..</p>
+                </div>
+                <div class="image-item">
+                    <img src="best practices.png" alt="Cyber Security Image 3 Example">
+                    <p style="color: #f0f0f0;">Businesses should implement cybersecurity best practices such as conducting regular security assessments and audits, educating employees about cybersecurity threats and safe practices, implementing access controls and data encryption, establishing incident response plans, and staying compliant with industry regulations. Investing in cybersecurity measures helps protect sensitive business data and preserves customer trust..</p>
+                </div>
+                <div class="image-item">
+                    <img src="How-To-Protect-Yourself-Online-1.webp" alt="Cyber Security Image 4 Example">
+                    <p style="color: #f0f0f0;">Individuals can protect themselves online by using strong and unique passwords, enabling two-factor authentication (2FA), keeping software and systems updated, being cautious of suspicious emails and links, and regularly backing up important data. Additionally, using antivirus software and being mindful of privacy settings on social media are essential practices..</p>
+                </div>
+                <div class="image-item">
+                    <img src="f8crw3op.png" alt="Cyber Security Image 5 Example">
+                    <p style="color: #f0f0f0;">Common cybersecurity threats include malware (such as viruses and ransomware), phishing scams, data breaches, and denial-of-service (DoS) attacks. These threats aim to exploit vulnerabilities in computer systems and networks to steal information or cause harm..</p>
+                </div>
+            </section>
+            <section class="text-content">
+                <p style="color: #ffffff;"> <strong> Cyber Security encompasses the methods and practices used to protect digital systems, networks, and data from unauthorized access, attacks, and damage. It is essential in safeguarding personal information, business assets, and government operations in an increasingly interconnected world. Effective cybersecurity involves a combination of technology, processes, and user education to mitigate risks, respond to threats, and ensure the confidentiality, integrity, and availability of digital assets. As cyber threats evolve, cybersecurity measures must continually adapt to new challenges to maintain trust, privacy, and the smooth operation of digital environments globally.</strong></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="logo.png" alt="Cyber Security Logo">
+        </div>
+        <p>Web Designer: Enzo Gallanosa</p>
+        <p>Email: <a href="mailto:202312671@fit.edu.ph">202312671@fit.edu.ph</a></p>
+    </footer>
+</body>
+</html>
